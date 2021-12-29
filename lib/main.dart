@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile/config/constants.dart';
 import 'package:mobile/pages/login_page.dart';
 import 'package:mobile/pages/register_page.dart';
@@ -21,7 +22,14 @@ class MyApp extends StatelessWidget {
         RegisterPage.routeName: (ctx) => const RegisterPage(),
       },
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primaryColor: kPrimaryColor, primarySwatch: Colors.pink),
+      theme: ThemeData(
+        primaryColor: kPrimaryColor,
+        primarySwatch: Colors.pink,
+        textTheme: GoogleFonts.poppinsTextTheme(
+          Theme.of(context)
+              .textTheme, // If this is not set, then ThemeData.light().textTheme is used.
+        ),
+      ),
       home: const LoginPage(),
     );
   }

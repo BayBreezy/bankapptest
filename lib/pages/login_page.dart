@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile/config/constants.dart';
 import 'package:mobile/pages/register_page.dart';
 
@@ -25,10 +24,6 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               const SizedBox(
                 height: 120.0,
-              ),
-              Text(
-                'TestTes',
-                style: GoogleFonts.poppins(),
               ),
               const Text(
                 "Welcome back",
